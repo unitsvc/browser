@@ -1,15 +1,15 @@
-// Open is a simple example of the github.com/pkg/browser package.
+// Open is a simple example of the github.com/unitsvc/browser package.
 //
 // Usage:
 //
-//    # Open a file in a browser window
-//    Open $FILE
+//	# Open a file in a browser window
+//	Open $FILE
 //
-//    # Open a URL in a browser window
-//    Open $URL
+//	# Open a URL in a browser window
+//	Open $URL
 //
-//    # Open the contents of stdin in a browser window
-//    cat $SOMEFILE | Open
+//	# Open the contents of stdin in a browser window
+//	cat $SOMEFILE | Open
 package main
 
 import (
@@ -20,7 +20,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/cli/browser"
+	"github.com/unitsvc/browser"
 )
 
 func usage() {

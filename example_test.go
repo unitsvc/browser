@@ -3,21 +3,20 @@ package browser
 import "strings"
 
 func ExampleOpenFile() {
+	// Open a local HTML file in the browser
 	_ = OpenFile("index.html")
+	// Output:
 }
 
 func ExampleOpenReader() {
-	// https://github.com/rust-lang/rust/issues/13871
-	const quote = `There was a night when winds from unknown spaces
-whirled us irresistibly into limitless vacum beyond all thought and entity.
-Perceptions of the most maddeningly untransmissible sort thronged upon us;
-perceptions of infinity which at the time convulsed us with joy, yet which
-are now partly lost to my memory and partly incapable of presentation to others.`
-	r := strings.NewReader(quote)
-	_ = OpenReader(r)
+	// Open HTML content from a reader
+	html := strings.NewReader("<html><body>Hello, World!</body></html>")
+	_ = OpenReader(html)
+	// Output:
 }
 
 func ExampleOpenURL() {
-	const url = "http://golang.org/"
-	_ = OpenURL(url)
+	// Open a URL in the browser
+	_ = OpenURL("https://go.dev")
+	// Output:
 }

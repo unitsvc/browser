@@ -1,6 +1,7 @@
 package browser
 
 import (
+	"fmt"
 	"os/exec"
 	"strings"
 )
@@ -17,5 +18,5 @@ func openBrowser(url string) error {
 		}
 	}
 
-	return &exec.Error{Name: strings.Join(providers, ","), Err: exec.ErrNotFound}
+	return fmt.Errorf("browser: none of the providers %s are available", strings.Join(providers, ", "))
 }
